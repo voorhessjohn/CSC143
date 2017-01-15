@@ -10,9 +10,6 @@ import java.util.*;
 public class CheckSum {
 	//store user input as String
 	public String userEAN;
-	public String userEANSTR;
-	//instantiate Input class to receive user input
-	//public Input input = new Input();
 	//instantiate 1D array of weights
 	int [] weights = {1,3,1,3,1,3,1,3,1,3,1,3};
 	//boolean to allow user to quit by typing "q"
