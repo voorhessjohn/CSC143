@@ -1,4 +1,4 @@
-import uwcse.io.Input;
+import java.util.*;
 
 /**
  * CSC 143 Weekly Problem 2 <br>
@@ -10,8 +10,9 @@ import uwcse.io.Input;
 public class CheckSum {
 	//store user input as String
 	public String userEAN;
+	public String userEANSTR;
 	//instantiate Input class to receive user input
-	public Input input = new Input();
+	//public Input input = new Input();
 	//instantiate 1D array of weights
 	int [] weights = {1,3,1,3,1,3,1,3,1,3,1,3};
 	//boolean to allow user to quit by typing "q"
@@ -20,16 +21,23 @@ public class CheckSum {
 	public String quitStr = "q";
 	
 	
+	
 	public void acceptAndCheckEAN() {
 		
 		while (!quit){
+			Scanner console = new Scanner(System.in);
 			
-			this.userEAN = (String) input.readString("Please enter your EAN or type q to quit:");
 			//find length of input string to determine validity
+			System.out.print("Please enter your EAN or type q to quit:");
+			
+			this.userEAN = console.next();
+			
+			
 			int inputLength = this.userEAN.length();
 			//quit boolean defaults to false
 			quit = false;
 			//if block allows loop to break if user has typed "q"
+			
 			if (this.userEAN.equals(quitStr)){
 				quit = true;
 				break;
@@ -38,7 +46,8 @@ public class CheckSum {
 				System.out.println("That is not a valid EAN");	
 			//if requirements are met, the program will run
 			}else{
-				quit = false;	
+				quit = false;
+				
 			}
 			//create int array to store each character of user string input as individual int
 			int[] ean = new int[userEAN.length()];
@@ -88,9 +97,12 @@ public class CheckSum {
 		    //The last digit of the user input EAN is checked against the proposed proper value
 		    if(checkLastDigit == ean[ean.length-1]){
 		    	System.out.println("Your EAN is valid");
+		    	
 		    }else{
 		    	System.out.println("Your EAN is invalid");
+		    	
 		    }
+		    
 		}
 	}
 	
