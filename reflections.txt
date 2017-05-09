@@ -1,0 +1,26 @@
+John Voorhess
+CSC143 Assignment 1
+reflections
+
+What is working:
+This program will successfully encrypt and decrypt strings using the default rotor settings.
+Both rotor rotation methods work correctly.
+The user interaction is working.
+
+What is not working:
+The method to accept custom rotor settings is incomplete. 
+The method to demonstrate encryption and decryption with sample strings is not implemented.
+User input to accept strings for encryption and decryption is not validated. 
+The user must use # for spaces and the input is not checked for validity of characters.
+The return values are not formatted in a nice way.
+The program is not commented.
+
+Thoughts:
+I spent too much time figuring out how to implement the rotor rotation.
+Rotating the rotors at the wrong place in the nested for loops caused significant setbacks.
+I mistakenly thought that I must set the rotor back to its last position after encryption
+to decrypt a string. I was wrong. I was unable to give myself the time that this 
+assignment warranted and my work suffered.
+
+I would greatly appreciate more time to complete this assignment 
+if doing so would earn me more credit.
